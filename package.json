@@ -13,7 +13,9 @@
   "type": "module",
   "description": "Plantilla de servidor con capas ",
   "dependencies": {
-    "express": "^5.1.0"
+    "dotenv": "^17.0.1",
+    "express": "^5.1.0",
+    "firebase": "^11.10.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"

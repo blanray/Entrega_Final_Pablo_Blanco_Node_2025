@@ -1,6 +1,6 @@
 import express from "express";
 import { join, __dirname } from "./utils/index.js";
-import userRoutes from "./routes/user.route.js";
+import productRoutes from "./routes/product.route.js";
 //settings
 const app = express();
 app.set("PORT", 3000);
