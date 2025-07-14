@@ -1,7 +1,19 @@
-import { getAllProducts } from "../models/product.model.js";
+import productModel from "../models/product.model.js";
 
 const getAll = async () => {
-  return await getAllProducts;
+  return await productModel.getAllProducts();
 };
 
-export default { getAll };
+const createProduct = async (product) => {
+  return await productModel.saveProduct(product);
+};
+
+const getByID = async(id) =>{
+  return await productModel.getProductByID(id);
+};
+
+const deleteProduct = async(id) =>{
+  return await productModel.deleteProductByID(id);
+};
+
+export default { getAll, createProduct, getByID, deleteProduct };

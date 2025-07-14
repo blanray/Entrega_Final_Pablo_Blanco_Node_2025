@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
   res.json({ title: "Home Page" });
 });
-// app.use("/api/users", userRoutes);
+app.use("/api/products", productRoutes);
 
 //listeners
 app.listen(app.get("PORT"), () => {
