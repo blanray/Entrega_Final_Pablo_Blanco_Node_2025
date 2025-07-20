@@ -48,12 +48,17 @@ Luego de autenticado, se accede a las siguientes rutas:
 
 / Raiz, solo devuelve codigo HTML
 /api/products
+
 GET: obtiene todos los productos de la coleccion
+
 POST: se envia en el cuerpo de la request el siguiente contenido: nombre, cantidad y precio
 
 /api/products/id
+
 GET: con el ID solicitado se obtiene el producto
+
 DELETE: se borra de la coleccion el documento con el ID indicado
+
 
 ## Licencia
 
