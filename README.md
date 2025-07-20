@@ -10,73 +10,8 @@ Este proyecto es una plantilla básica para configurar un servidor con **Express
 
 ---
 
-## Instalación
+## Credito al template de Daniel Riverol de donde me base para armar el servidor
 
-### 1. Clonar el repositorio con `degit`
-
-`degit` es una herramienta para clonar plantillas de manera limpia (sin el historial de Git).
-
-#### Instalar `degit` (si no lo tienes instalado)
-
-```bash
-npm install -g degit
-```
-
-#### Clonar el repositorio
-
-```bash
-degit DanielRiverol/template-express-layers carpeta-destino
-```
-
-Reemplaza `usuario/repo-nombre` por el nombre del repositorio y `carpeta-destino` por el nombre de la carpeta donde deseas clonar el proyecto.
-
-### 2. Instalar dependencias
-
-Una vez clonado el repositorio, entra en la carpeta del proyecto:
-
-```bash
-cd carpeta-destino
-```
-
-Luego, instala las dependencias:
-
-```bash
-npm install
-```
-
----
-
-## Comandos disponibles
-
-### Iniciar el servidor
-
-Este comando inicia el servidor en modo desarrollo con Nodemon:
-
-```bash
-npm run dev
-```
-
-### Actualizar dependencias (Opcional)
-
-Para poder todas estas dependencias a su última versión, deberás instalar un paquete llamado `npm-check-updates` de forma global:
-
-```bash
-npm install -g npm-check-updates
-```
-
-Una vez instalado deberás correr el siguiente comando:
-
-```bash
-ncu -u
-```
-
-Esto modificará tu archivo package.json para que todas las dependencias estén listadas en sus últimas versiones.
-
-Una vez completado este proceso, basta con ejecutar el siguiente comando para actualizar todas tus dependencias:
-
-```bash
-npm install
-```
 
 ## Estructura del proyecto
 ``` plaintext
@@ -105,6 +40,20 @@ carpeta-destino/
 
 ```
 ---
+
+## Funcionalidad
+
+En la URL /auth se genera el Token indicando mail "admin@admin.com" y password "password123" como body de la request.
+Luego de autenticado, se accede a las siguientes rutas:
+
+/ Raiz, solo devuelve codigo HTML
+/api/products
+GET: obtiene todos los productos de la coleccion
+POST: se envia en el cuerpo de la request el siguiente contenido: nombre, cantidad y precio
+
+/api/products/id
+GET: con el ID solicitado se obtiene el producto
+DELETE: se borra de la coleccion el documento con el ID indicado
 
 ## Licencia
 
